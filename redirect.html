@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    var filter              = ['CN', 'JP', 'TW', 'HK', 'TH', 'SG'];
+    var targetVisitorsUrl   = 'http://www.funguide.com.cn/';
+    var allVisitorsUrl      = 'http://en.funguide.com.cn/';
+    function geoip(g){window.top.location.href=inArray(g.country_code,filter)?targetVisitorsUrl:allVisitorsUrl}
+    function inArray(r,n){for(var t=n.length,e=0;t>e;e++)if(n[e]==r)return!0;return!1}
+    (function(g,e,o,i,p){i=g.createElement(e),p=g.getElementsByTagName(e)[0];i.async=0;i.src=o;p.parentNode.insertBefore(i,p)})(document,'script','https://freegeoip.net/json/?callback=geoip');
+  </script>
+</head>
+<body>
+    <p>Please wait...</p>
+</body>
+</html>
+
